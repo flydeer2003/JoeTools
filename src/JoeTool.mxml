@@ -49,7 +49,8 @@
         }
 
         private function openDataFolder():void {
-
+            var file:File = new File("D:/JoeTool/");
+            file.openWithDefaultApplication();
         }
         ]]></fx:Script>
 </s:WindowedApplication>
