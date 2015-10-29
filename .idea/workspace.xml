@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AirPackageProjectParameters">
+    <option name="desktopPackageType" value="native installer (*.exe)" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a311c0b-7e22-4d3b-b884-240621f7c2de" name="Default" comment="初始提交.idea/uiDesigner.xml文件">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
+    </list>
+    <ignored path="JoeTool.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="JoeTool" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="FixMissedImageTool.mxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+                <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+                <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+                <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoeTool.mxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+              <folding>
+                <marker date="1446098194099" expanded="true" signature="2511:2552" placeholder="{...}" />
+                <marker date="1446098194099" expanded="true" signature="2601:2712" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33628318">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uiDesigner.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoeTool.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JoeTool.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="155" selection-start-line="4" selection-start-column="155" selection-end-line="4" selection-end-column="155" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadTool.mxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/joe/tool/download/DownloadTool.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <marker date="1437360185876" expanded="true" signature="408:812" placeholder="{...}" />
+                <marker date="1437360185876" expanded="true" signature="470:737" placeholder="/*...*/" />
+                <marker date="1437360185876" expanded="true" signature="892:942" placeholder="{...}" />
+                <marker date="1437360185876" expanded="true" signature="1010:1082" placeholder="{...}" />
+                <marker date="1437360185876" expanded="true" signature="1154:1190" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixWrongProjectXmlTool.mxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/FixWrongProjectXmlTool.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="77" />
+              <folding>
+                <marker date="1443089843129" expanded="false" signature="251:442" placeholder="..." />
+                <marker date="1443089843129" expanded="true" signature="876:1251" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="1117:1177" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="1314:1498" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="1362:1465" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="1394:1455" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="1616:1765" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="1823:2397" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="2034:2161" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="2075:2153" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="2476:3023" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="2754:2878" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="2882:2947" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="3092:3307" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="3123:3171" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="3368:3541" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="3603:3777" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="3834:3970" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="4022:4662" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="4115:4140" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="4193:4656" placeholder="{...}" />
+                <marker date="1443089843129" expanded="true" signature="4743:4910" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flex 4 Component" />
+        <option value="ActionScript Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Main.mxml" />
+        <option value="$PROJECT_DIR$/src/JoeTool-descriptor.xml" />
+        <option value="$PROJECT_DIR$/src/com/joe/tool/common/StatusEnum.as" />
+        <option value="$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/Project.as" />
+        <option value="$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/FixWrongProjectXmlTool.mxml" />
+        <option value="$PROJECT_DIR$/src/com/joe/tool/common/FileUtil.as" />
+        <option value="$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml" />
+        <option value="$PROJECT_DIR$/src/JoeTool.mxml" />
+        <option value="$PROJECT_DIR$/JoeTool.iml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1874" />
+    <option name="height" value="1092" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad/bin/git.exe" />
+    <property name="recentsLimit" value="5" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA_workspace\JoeTool\src" />
+      <recent name="D:\IDEA_workspace\JoeTool" />
+    </key>
+    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
+      <recent name="com.joe.tool.common" />
+      <recent name="com.joe.tool.FixWrongProjectXml" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flash App.JoeTool">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="JoeTool" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="JoeTool" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="JoeTool" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Flash App.JoeTool" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\luQF\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a311c0b-7e22-4d3b-b884-240621f7c2de" name="Default" comment="" />
+      <created>1437362249852</created>
+      <option name="number" value="Default" />
+      <updated>1437362249852</updated>
+      <workItem from="1437362261532" duration="4096000" />
+      <workItem from="1437448972139" duration="791000" />
+      <workItem from="1437724417002" duration="8382000" />
+      <workItem from="1438751957681" duration="3385000" />
+      <workItem from="1440399547284" duration="2468000" />
+      <workItem from="1443060859310" duration="30514000" />
+      <workItem from="1444733399950" duration="2705000" />
+      <workItem from="1445587882638" duration="10960000" />
+      <workItem from="1446089662220" duration="8409000" />
+      <workItem from="1446109405507" duration="5003000" />
+    </task>
+    <task id="LOCAL-00001" summary="init gitignore">
+      <created>1446094156575</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1446094156575</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change ignore config for .idea folder">
+      <created>1446094515394</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1446094515394</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加Open Data Folder按钮">
+      <created>1446096250432</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1446096250432</updated>
+    </task>
+    <task id="LOCAL-00004" summary="取消*.iml文件的忽略">
+      <created>1446101186884</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1446101186884</updated>
+    </task>
+    <task id="LOCAL-00005" summary="加回IDE的主配置文件">
+      <created>1446112120556</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1446112120556</updated>
+    </task>
+    <task id="LOCAL-00006" summary="取消对*.iml文件的忽略">
+      <created>1446112749178</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1446112749178</updated>
+    </task>
+    <task id="LOCAL-00007" summary="取消对*.idea 目录下所有文件的忽略">
+      <created>1446114925617</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1446114925617</updated>
+    </task>
+    <task id="LOCAL-00008" summary="初始提交.idea/uiDesigner.xml文件">
+      <created>1446114987540</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1446114987540</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="76713000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1874" height="1092" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33090532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1748179" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16097023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19458897" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21956296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
+    <MESSAGE value="init gitignore" />
+    <MESSAGE value="change ignore config for .idea folder" />
+    <MESSAGE value="增加Open Data Folder按钮" />
+    <MESSAGE value="取消*.iml文件的忽略" />
+    <MESSAGE value="加回IDE的主配置文件" />
+    <MESSAGE value="取消对*.iml文件的忽略" />
+    <MESSAGE value="取消对*.idea 目录下所有文件的忽略" />
+    <MESSAGE value="初始提交.idea/uiDesigner.xml文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始提交.idea/uiDesigner.xml文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="15" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="FlashRunConfigurationType">
+        <watch expression="event.toString()" language="ECMA Script Level 4" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/FixWrongProjectXmlTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="77" />
+          <folding>
+            <marker date="1443089843129" expanded="false" signature="251:442" placeholder="..." />
+            <marker date="1443089843129" expanded="true" signature="876:1251" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1117:1177" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1314:1498" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1362:1465" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1394:1455" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1616:1765" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1823:2397" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2034:2161" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2075:2153" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2476:3023" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2754:2878" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2882:2947" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3092:3307" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3123:3171" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3368:3541" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3603:3777" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3834:3970" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4022:4662" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4115:4140" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4193:4656" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4743:4910" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+          <folding>
+            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/xml/ProjectXmlTranslator.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/FixWrongProjectXmlTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="56" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
+          <folding>
+            <marker date="1443089843129" expanded="false" signature="251:442" placeholder="..." />
+            <marker date="1443089843129" expanded="true" signature="876:1251" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1117:1177" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1314:1498" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1362:1465" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1394:1455" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1616:1765" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1823:2397" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2034:2161" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2075:2153" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2476:3023" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2754:2878" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2882:2947" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3092:3307" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3123:3171" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3368:3541" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3603:3777" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3834:3970" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4022:4662" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4115:4140" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4193:4656" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4743:4910" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/Project.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/generateTemplatesPackage/GenerateTemplatesPackageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/xml/Project.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Flash/JoeTool:com.joe.tool.fixmissedimage.FixMissedImageTool">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Flash</ID>
+          <OriginalElement>JoeTool:com.joe.tool.fixmissedimage.FixMissedImageTool</OriginalElement>
+          <nodes>
+            <node x="" y="">flash.display.DisplayObject</node>
+            <node x="" y="">mx.managers.ILayoutManagerClient</node>
+            <node x="" y="">JoeTool:com.joe.tool.fixmissedimage.FixMissedImageTool</node>
+            <node x="" y="">spark.components.Group</node>
+            <node x="" y="">mx.core.ILayoutDirectionElement</node>
+            <node x="" y="">flash.events.IEventDispatcher</node>
+            <node x="" y="">mx.core.IInvalidating</node>
+            <node x="" y="">mx.automation.IAutomationObject</node>
+            <node x="" y="">mx.core.IFlexDisplayObject</node>
+            <node x="" y="">mx.managers.IToolTipManagerClient</node>
+            <node x="" y="">mx.core.IVisualElement</node>
+            <node x="" y="">mx.core.IChildList</node>
+            <node x="" y="">flash.display.InteractiveObject</node>
+            <node x="" y="">mx.core.IVisualElementContainer</node>
+            <node x="" y="">mx.styles.ISimpleStyleClient</node>
+            <node x="" y="">mx.core.IStateClient</node>
+            <node x="" y="">flash.display.Sprite</node>
+            <node x="" y="">mx.core.FlexSprite</node>
+            <node x="" y="">flash.display.DisplayObjectContainer</node>
+            <node x="" y="">mx.core.IUID</node>
+            <node x="" y="">mx.core.ILayoutElement</node>
+            <node x="" y="">mx.core.UIComponent</node>
+            <node x="" y="">spark.components.supportClasses.GroupBase</node>
+            <node x="" y="">mx.validators.IValidatorListener</node>
+            <node x="" y="">spark.core.IGraphicElementContainer</node>
+            <node x="" y="">spark.core.ISharedDisplayObject</node>
+            <node x="" y="">mx.core.IRepeaterClient</node>
+            <node x="" y="">spark.core.IViewport</node>
+            <node x="" y="">mx.core.IPropertyChangeNotifier</node>
+            <node x="" y="">mx.styles.IAdvancedStyleClient</node>
+            <node x="" y="">mx.core.IDeferredInstantiationUIComponent</node>
+            <node x="" y="">flash.display.IBitmapDrawable</node>
+            <node x="" y="">mx.core.IConstraintClient</node>
+            <node x="" y="">Object</node>
+            <node x="" y="">mx.core.IUIComponent</node>
+            <node x="" y="">mx.styles.IStyleClient</node>
+            <node x="" y="">mx.core.IFlexModule</node>
+            <node x="" y="">flash.events.EventDispatcher</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5948072383949646" x="1300.0" y="470.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Flash/com.joe.tool.generateTemplatesPackage">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Flash</ID>
+          <OriginalElement>com.joe.tool.generateTemplatesPackage</OriginalElement>
+          <nodes>
+            <node x="" y="">JoeTool:com.joe.tool.generateTemplatesPackage.ImageContent</node>
+            <node x="" y="">JoeTool:com.joe.tool.generateTemplatesPackage.GenerateTemplatesPackageTool</node>
+            <node x="" y="">JoeTool:com.joe.tool.generateTemplatesPackage.TemplateItemVO</node>
+            <node x="" y="">JoeTool:com.joe.tool.generateTemplatesPackage.ProductType</node>
+            <node x="" y="">JoeTool:com.joe.tool.generateTemplatesPackage.TemplatePreviewItemRenderer</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="-32.0" y="-406.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Flash/com.joe.tool">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Flash</ID>
+          <OriginalElement>com.joe.tool</OriginalElement>
+          <nodes>
+            <node x="" y="">com.joe.tool.base64</node>
+            <node x="" y="">com.joe.tool.escape</node>
+            <node x="" y="">com.joe.tool.download</node>
+            <node x="" y="">com.joe.tool.generateTemplatesPackage</node>
+            <node x="" y="">com.joe.tool.fixmissedimage</node>
+            <node x="" y="">com.joe.tool.xml</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="161.0" y="203.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Flash/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Flash</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">SparkClasses</node>
+            <node x="" y="">ReferenceError</node>
+            <node x="" y="">AutomationAirClasses</node>
+            <node x="" y="">URIError</node>
+            <node x="" y="">SparkSkinsClasses</node>
+            <node x="" y="">String</node>
+            <node x="" y="">Math</node>
+            <node x="" y="">AIRFrameworkClasses</node>
+            <node x="" y="">skins</node>
+            <node x="" y="">MobileComponentsClasses</node>
+            <node x="" y="">FlashContainerPlaceholder</node>
+            <node x="" y="">WireframeClasses</node>
+            <node x="" y="">AutomationFlashFlexKitClasses</node>
+            <node x="" y="">SyntaxError</node>
+            <node x="" y="">Boolean</node>
+            <node x="" y="">MobileThemeClasses</node>
+            <node x="" y="">AutomationDMVClasses</node>
+            <node x="" y="">RegExp</node>
+            <node x="" y="">flashx</node>
+            <node x="" y="">AutomationSparkClasses</node>
+            <node x="" y="">Tracer</node>
+            <node x="" y="">Walker</node>
+            <node x="" y="">mx</node>
+            <node x="" y="">AutomationClasses</node>
+            <node x="" y="">Namespace</node>
+            <node x="" y="">FrameworkClasses</node>
+            <node x="" y="">JoeTool:Main</node>
+            <node x="" y="">VerifyError</node>
+            <node x="" y="">TypeError</node>
+            <node x="" y="">Object</node>
+            <node x="" y="">Class</node>
+            <node x="" y="">avmplus</node>
+            <node x="" y="">IYQDLogFactory</node>
+            <node x="" y="">flash</node>
+            <node x="" y="">SecurityError</node>
+            <node x="" y="">components</node>
+            <node x="" y="">FlashComponentPlaceholder</node>
+            <node x="" y="">YQDLogFactory</node>
+            <node x="" y="">JSON</node>
+            <node x="" y="">air</node>
+            <node x="" y="">AIRSparkClasses</node>
+            <node x="" y="">AutomationAirSparkClasses</node>
+            <node x="" y="">AuthoringSupportClasses</node>
+            <node x="" y="">RPCClasses</node>
+            <node x="" y="">Function</node>
+            <node x="" y="">Number</node>
+            <node x="" y="">spark</node>
+            <node x="" y="">RangeError</node>
+            <node x="" y="">AdvancedDataGridClasses</node>
+            <node x="" y="">ApplicationUpdaterDialogs</node>
+            <node x="" y="">ChartsClasses</node>
+            <node x="" y="">org</node>
+            <node x="" y="">QName</node>
+            <node x="" y="">MxClasses</node>
+            <node x="" y="">adobe</node>
+            <node x="" y="">XMLList</node>
+            <node x="" y="">Error</node>
+            <node x="" y="">EvalError</node>
+            <node x="" y="">uint</node>
+            <node x="" y="">Date</node>
+            <node x="" y="">int</node>
+            <node x="" y="">Array</node>
+            <node x="" y="">UninitializedError</node>
+            <node x="" y="">DefinitionError</node>
+            <node x="" y="">MyFlexContentHolder</node>
+            <node x="" y="">XML</node>
+            <node x="" y="">flexunit</node>
+            <node x="" y="">FlexContentHolderThumbnail</node>
+            <node x="" y="">ArgumentError</node>
+            <node x="" y="">SparkDmvClasses</node>
+            <node x="" y="">CoreClasses</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9565031280869276" x="804.0" y="465.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>PRIVATE</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool-descriptor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35714287">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/generateTemplatesPackage/ImageContent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/generateTemplatesPackage/ProductType.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/common/StatusEnum.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21436228">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/generateTemplatesPackage/TemplateItemVO.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/generateTemplatesPackage/GenerateTemplatesPackageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9322033">
+          <caret line="281" column="12" selection-start-line="281" selection-start-column="12" selection-end-line="291" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/projects/rpc/src/mx/rpc/http/HTTPService.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="992" column="0" selection-start-line="992" selection-start-column="0" selection-end-line="992" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/projects/rpc/src/mx/rpc/AbstractInvoker.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="317" column="42" selection-start-line="317" selection-start-column="42" selection-end-line="317" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/projects/rpc/src/mx/messaging/channels/DirectHTTPChannel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="450" column="0" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/projects/rpc/src/mx/rpc/Responder.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/projects/airspark/src/spark/components/WindowedApplication.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2692" column="9" selection-start-line="2692" selection-start-column="9" selection-end-line="2692" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/pb-core-2.3.2.swc!/library.swf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33281735">
+          <caret line="649" column="38" selection-start-line="649" selection-start-column="38" selection-end-line="649" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files (x86)/Adobe/Adobe Flash Builder 4.6/sdks/4.6.0/frameworks/libs/air/airglobal.swc!/library.swf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33281735">
+          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/Project.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7352941">
+          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/xml/ProjectXmlTranslator.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/FixWrongProjectXmlTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="77" />
+          <folding>
+            <marker date="1443089843129" expanded="false" signature="251:442" placeholder="..." />
+            <marker date="1443089843129" expanded="true" signature="876:1251" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1117:1177" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1314:1498" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1362:1465" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1394:1455" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1616:1765" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="1823:2397" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2034:2161" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2075:2153" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2476:3023" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2754:2878" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="2882:2947" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3092:3307" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3123:3171" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3368:3541" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3603:3777" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="3834:3970" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4022:4662" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4115:4140" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4193:4656" placeholder="{...}" />
+            <marker date="1443089843129" expanded="true" signature="4743:4910" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/common/FileUtil.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15005359">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.name">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/libs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/flexCompiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45064378">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
+            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
+            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
+            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/download/DownloadTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <marker date="1437360185876" expanded="true" signature="408:812" placeholder="{...}" />
+            <marker date="1437360185876" expanded="true" signature="470:737" placeholder="/*...*/" />
+            <marker date="1437360185876" expanded="true" signature="892:942" placeholder="{...}" />
+            <marker date="1437360185876" expanded="true" signature="1010:1082" placeholder="{...}" />
+            <marker date="1437360185876" expanded="true" signature="1154:1190" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <marker date="1446098194099" expanded="true" signature="2511:2552" placeholder="{...}" />
+            <marker date="1446098194099" expanded="true" signature="2601:2712" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JoeTool.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="155" selection-start-line="4" selection-start-column="155" selection-end-line="4" selection-end-column="155" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33628318">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Flexmojos SDK 4.6.b.23201</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JoeTool|JoeTool</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Flexmojos SDK 4.6.b.23201</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>libs</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
