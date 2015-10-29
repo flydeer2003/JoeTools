@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" left="10" right="10" top="10" bottom="10"
+		 creationComplete="creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import com.yinquduo.common.core.utils.StringUtil;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.DynamicEvent;
+			import mx.events.FlexEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			
+			import spark.events.GridSelectionEvent;
+			import spark.events.IndexChangeEvent;
+			import spark.events.TextOperationEvent;
+			private static var FRAME_TEMPLATES_FOLDER:String = "D:/JoeTool/downloads/frame-templates/"
+			private static var BOOK_TEMPLATES_FOLDER:String = "D:/JoeTool/downloads/book-templates/"
+			private var sizeFolder:File;
+			private var sizeDataFolder:File;
+			private var listXmlFile:File;
+			private var trimImagesNum:int = 5;
+			
+			[Bindable]
+			protected var templateItems:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			protected var resultTemplateItems:ArrayCollection = new ArrayCollection();
+			protected var downloadItems:ArrayCollection = new ArrayCollection();
+			private var downloadItem:TemplateItemVO;
+			[Bindable]
+			protected var currentSize:String;
+			protected var currentProductType:ProductType;
+			private var sizeToListXmlDict:Dictionary = new Dictionary();
+			private var filterImgNum:int = 0;
+			[Bindable]
+			public var countForOne:int = 0;
+			[Bindable]
+			public var countForTwo:int = 0;
+			[Bindable]
+			public var countForThree:int = 0;
+			[Bindable]
+			public var countForFour:int = 0;
+			[Bindable]
+			public var countForFive:int = 0;
+			[Bindable]
+			public var countForCover:int = 0;
+			[Bindable]
+			public var countForCoverOne:int = 0;
+			[Bindable]
+			public var countForCoverTwo:int = 0;
+			[Bindable]
+			public var countForCoverThree:int = 0;
+			[Bindable]
+			public var countForCoverFour:int = 0;
+			[Bindable]
+			public var countForCoverFive:int = 0;
+			[Bindable]
+			public var spreadPageTemplate:TemplateItemVO;
+			[Bindable]
+			public var twoPagesTemplate:TemplateItemVO;
+			
+			protected function getCurrentListXml():XML{
+				return sizeToListXmlDict[currentSize] as XML;
+			}
+			
+			public function get storageFolderBase():String{
+				switch(currentProductType.code){
+					case ProductType.BOOK.code:
+						return BOOK_TEMPLATES_FOLDER;
+					case ProductType.NEW_FRAME.code:
+						return FRAME_TEMPLATES_FOLDER;
+				}
+				return "D:/JoeTool/downloads/unknown-templates/";
+			}
+			
+			protected function sizeInput_changeHandler(event:TextOperationEvent):void
+			{
+				if(currentProductType==null){
+					Alert.show("Please select product");
+					return;
+				}
+				updateListURLTextArea();
+			}
+			
+			private function updateListURLTextArea():void{
+				var randomNum:String = (new Date()).milliseconds+"";
+				listURLTextArea.text = "http://test.artisanstate.com/template/global/list?webClientId=1&productType="+currentProductType.code+"&designSize="+
+					sizeInput.text+"&autoRandomNum="+randomNum+"&imageNum=0";
+			}
+			
+			protected function generateBtn_clickHandler(sourceOfLoad:String):void
+			{
+				if(currentProductType==null){
+					Alert.show("Please select product");
+					return;
+				}
+				if(StringUtil.isEmpty(sizeInput.text)){
+					Alert.show("Please input size");
+					return;
+				}
+				
+				cleanup();
+				if(sourceOfLoad == "server"){
+					loadListFromServer();
+				}else if(sourceOfLoad == "local"){
+					loadListFromLocal();
+				}
+			}
+			
+			private function loadListFromLocal():void{
+				listXmlFile = new File(storageFolderBase+sizeInput.text+"/list.xml");
+				var fileStream:FileStream = new FileStream();
+				if(listXmlFile.exists){
+					fileStream.open(listXmlFile,FileMode.READ);
+					var listXmlString:String = fileStream.readUTFBytes(listXmlFile.size);
+					fileStream.close();
+					
+					var listXml:XML = new XML(listXmlString);					
+					handleListLoadData(listXml);
+				}else{
+					Alert.show("Not Found Local File: "+listXmlFile.url);
+				}
+			}
+			
+			private function loadListFromServer():void{
+				listService.url = listURLTextArea.text;
+				listService.send();	
+			}
+			
+			public function cleanup():void{
+				currentSize = null;
+				sizeFolder = null;
+				sizeDataFolder = null;
+				listXmlFile = null;
+				currentSize = sizeInput.text;
+				templateItems = new ArrayCollection();
+				downloadItems = new ArrayCollection();
+				resultTemplateItems = new ArrayCollection();
+				spreadPageTemplate = null;
+				twoPagesTemplate = null;
+				countForCover = 0;
+				countForCoverFive = 0;
+				countForCoverFour = 0;
+				countForCoverThree = 0;
+				countForCoverTwo = 0;
+				countForCoverOne = 0;
+				countForFive = 0;
+				countForFour = 0;
+				countForThree = 0;
+				countForTwo = 0;
+				countForOne = 0;
+				filterImgNum = 0;
+			}
+			
+			protected function listService_resultHandler(event:ResultEvent):void
+			{
+				var listXml:XML = new XML(event.result);
+				handleListLoadData(listXml);
+			}
+			
+			protected function handleListLoadData(listXml:XML):void{
+				sizeDataFolder = new File(storageFolderBase+sizeInput.text+"/data/");
+				if(!sizeDataFolder.exists){
+					sizeDataFolder.createDirectory();
+				}				
+				
+				sizeToListXmlDict[currentSize] = listXml; 
+				writeListXmlToDisk(listXml);
+				
+				var tempalteItemVO:TemplateItemVO;
+				
+				for each(var itemXml:XML in listXml.list.template){
+					if(isNeedTrim(itemXml)){
+						continue;
+					}
+					tempalteItemVO = new TemplateItemVO(currentProductType.code);
+					tempalteItemVO.storageFolderBase = storageFolderBase;
+					tempalteItemVO.parse(itemXml);
+					templateItems.addItem(tempalteItemVO);
+					downloadItems.addItem(tempalteItemVO);
+					if(tempalteItemVO.sheetType != TemplateItemVO.SHEET_TYPE_INNER){
+						//所有封面模板全部加入精选
+						addResultItem(tempalteItemVO);
+					}
+				}	
+			}
+			
+			protected function isNeedTrim(templateItemXml:XML):Boolean{
+				var needTrimFlag:Boolean = false;
+				needTrimFlag = (templateItemXml.isSinglePage+"").toLowerCase()=="true";
+				if(needTrimFlag==false){
+					var imgNum:int = templateItemXml.imageNum;
+					needTrimFlag = (imgNum > trimImagesNum); 
+				}
+				return needTrimFlag;
+			}
+			
+			protected function writeListXmlToDisk(listXml:XML):void{
+				listXmlFile = new File(storageFolderBase+sizeInput.text+"/list.xml"); 
+				var fs:FileStream = new FileStream();
+				fs.open(listXmlFile,FileMode.WRITE);
+				fs.writeUTFBytes(listXml.toXMLString());
+				fs.close();
+			}
+			
+			protected function writeResultDataToDisk(resultListXml:XML):void{
+				var outputFolderBase = storageFolderBase+sizeInput.text+"-精选-"+(new Date()).time+"";				
+				var resultListXmlFile:File = new File(outputFolderBase+"/list.xml");
+				if(!resultListXmlFile.parent.exists){
+					resultListXmlFile.parent.createDirectory();
+				}
+				var fs:FileStream = new FileStream();
+				fs.open(resultListXmlFile,FileMode.WRITE);
+				fs.writeUTFBytes(resultListXml.toXMLString());
+				fs.close();
+				for each(var item:TemplateItemVO in resultTemplateItems.source){
+					var itemXmlFile:File = new File(item.xmlFileFullPath);
+					itemXmlFile.copyTo(new File(outputFolderBase+item.xmlFilePath),true);
+					var itemThumbnailFile:File = new File(item.thumbnailFileFullPath);
+					itemThumbnailFile.copyTo(new File(outputFolderBase+item.thumbnailFilePath),true);
+				}
+				var outputFile:File = new File(outputFolderBase);
+				outputFile.openWithDefaultApplication();
+			}
+			
+			protected function listService_faultHandler(event:FaultEvent):void
+			{
+				Alert.show(event.toString());
+			}
+			
+			protected function downloadBtn_clickHandler(event:MouseEvent):void
+			{
+				if(currentProductType==null){
+					Alert.show("Please select product");
+					return;
+				}
+				
+				startNextDownload();
+			}
+			
+			private function startNextDownload():void
+			{
+				if(downloadItems.length>0){
+					var item:TemplateItemVO = downloadItems.getItemAt(0) as TemplateItemVO;
+					//http://test.artisanstate.com/template/global/item/guid/ce3317a8-5c57-46db-8e14-c59f3b214f17/size/16X20/viewData?webClientId=1&autoRandomNum=1419834032893
+					var url:String = "http://test.artisanstate.com/template/global/item/guid/"+item.guid+"/size/"+sizeInput.text +
+						"/viewData?webClientId=1&autoRandomNum="+(new Date()).time;
+					downloadService.url = url;
+					downloadItem = item;
+					downloadItem.xmlDownloadStatus = 0;
+					downloadService.send();
+				}
+			}
+			
+			protected function downloadService_resultHandler(event:ResultEvent):void
+			{
+				var viewDataXml:XML = new XML(event.result);
+				
+				writeXmlToDisk(viewDataXml);
+				
+				startDownloadThumbnail();				
+				
+			}
+			
+			private function convertToTemplateSize(size:String):String
+			{
+				var templateSize:String;
+				if(size){
+					var sizes:Array = size.split("X");
+					if(sizes.length==2 && (sizes[0] == sizes[1])){
+						templateSize = "8X8"
+					}else{
+						templateSize = size;
+					}
+				}
+				return templateSize;
+			}
+			
+			private function writeXmlToDisk(viewDataXml:XML):void{
+				var viewXmlFile:File = new File(downloadItem.xmlFileFullPath);
+				if(!viewXmlFile.parent.exists){
+					viewXmlFile.parent.createDirectory();
+				}
+				var fs:FileStream = new FileStream();
+				fs.open(viewXmlFile,FileMode.WRITE);
+				fs.writeUTFBytes(viewDataXml.toXMLString());
+				fs.close();				
+				downloadItem.xmlDownloadStatus = 1;
+			}
+			
+			protected function downloadService_faultHandler(event:FaultEvent):void
+			{
+				downloadItem.xmlDownloadStatus = -1;
+				downloadItem = null;
+				Alert.show(event.toString());
+			}
+			
+			protected function downloadSelectedItemBtn_clickHandler(event:MouseEvent):void
+			{
+				if(currentProductType==null){
+					Alert.show("Please select product");
+					return;
+				}
+				if(dg.selectedItem){
+					var tempalteItemVO:TemplateItemVO = dg.selectedItem as TemplateItemVO;					
+					downloadItems.addItem(tempalteItemVO);
+					tempalteItemVO.xmlDownloadStatus = 0;
+					tempalteItemVO.thumbnailDownloadStatus = 0;
+				}
+				startNextDownload();
+			}
+			
+			private var loaders:Dictionary = new Dictionary();
+			private function startDownloadThumbnail():void
+			{
+				var thumbnailLoader:URLLoader = new URLLoader();
+				thumbnailLoader.dataFormat = URLLoaderDataFormat.BINARY;
+				loaders[downloadItem.guid] = thumbnailLoader;
+				thumbnailLoader.addEventListener(Event.COMPLETE,thumbnailLoader_resultHandler);
+				thumbnailLoader.addEventListener(IOErrorEvent.IO_ERROR,thumbnailLoader_errorHandler);
+				thumbnailLoader.addEventListener(SecurityErrorEvent.SECURITY_ERROR,thumbnailLoader_errorHandler);
+				
+				var thumbnailUrl:String = "http://test.artisanstate.com/asresource/flex/TemplateThumbnail/"+convertToTemplateSize(currentSize)+"/"+downloadItem.guid+".jpg"+"?size="+currentSize+"&timeStamp="+(new Date()).time;
+				var urlRequest:URLRequest = new URLRequest(thumbnailUrl);
+				urlRequest.method = URLRequestMethod.GET;
+				downloadItem.thumbnailDownloadStatus = 0;
+				thumbnailLoader.load(urlRequest);
+			}
+			
+			protected function thumbnailLoader_resultHandler(event:Event):void
+			{
+				var loader:URLLoader = event.target as URLLoader;
+				loader.removeEventListener(Event.COMPLETE,thumbnailLoader_resultHandler);
+				loader.removeEventListener(IOErrorEvent.IO_ERROR,thumbnailLoader_errorHandler);
+				loader.removeEventListener(SecurityErrorEvent.SECURITY_ERROR,thumbnailLoader_errorHandler);
+				loaders[downloadItem.guid] = null;
+				delete loaders[downloadItem.guid];
+				writeThumbnailToDisk(loader.data);
+				downloadItems.removeItemAt(downloadItems.getItemIndex(downloadItem));
+				startNextDownload();
+			}
+			
+			protected function thumbnailLoader_errorHandler(event:Event):void
+			{
+				downloadItem.thumbnailDownloadStatus = -1;
+				downloadItem = null;
+				Alert.show(event.toString());
+			}
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				//init products list
+				products.addItem(ProductType.BOOK);
+				products.addItem(ProductType.NEW_FRAME);
+			}
+			
+			private function writeThumbnailToDisk(data:ByteArray):void
+			{
+				var thumbFile:File = new File(downloadItem.thumbnailFileFullPath);
+				if(!thumbFile.parent.exists){
+					thumbFile.parent.createDirectory();
+				}
+				var fs:FileStream = new FileStream();
+				fs.open(thumbFile,FileMode.WRITE);
+				fs.writeBytes(data);
+				fs.close();				
+				downloadItem.thumbnailDownloadStatus = 1;
+			}
+			
+			protected function productComboBox_changeHandler(event:IndexChangeEvent):void
+			{
+				if(productComboBox.selectedItem){
+					currentProductType = productComboBox.selectedItem as ProductType;
+				}
+			}
+			
+			private function lookupTemplateItem(guid:String):TemplateItemVO{
+				for each(var item:TemplateItemVO in templateItems.source){
+					if(item.guid == guid){
+						return item;
+					}
+				}
+				return null;
+			}
+			
+			private function deleteTemplateFromMemory(tempalteItemVO:TemplateItemVO):void{
+				if(templateItems.contains(tempalteItemVO)){
+					templateItems.removeItemAt(templateItems.getItemIndex(tempalteItemVO));
+				}
+				if(downloadItems.contains(tempalteItemVO)){
+					downloadItems.removeItemAt(downloadItems.getItemIndex(tempalteItemVO));
+				}
+			}
+			
+			protected function trimAndOutputFinalListXmlBtn_clickHandler(event:MouseEvent):void
+			{
+				if(resultTemplateItems.length<=0){
+					Alert.show("精选模板数据为空");
+					return;
+				}
+				if(spreadPageTemplate == null){
+					Alert.show("跨页平铺模板未设置");
+					return;
+				}
+				if(twoPagesTemplate == null){
+					Alert.show("双页平铺模板未设置");
+					return;
+				}
+				var rootXml:XML = <result state="success">
+  									<list spreadTemplateGuid="" halfPageSpreadTemplateGuid="">
+									</list>
+								  </result>;
+				var listXml:XML = rootXml.list[0];
+				listXml.@spreadTemplateGuid = spreadPageTemplate.guid;
+				listXml.@halfPageSpreadTemplateGuid = twoPagesTemplate.guid;
+				for each(var item:TemplateItemVO in resultTemplateItems.source){
+					listXml.appendChild(item.xml);	
+				}
+				writeResultDataToDisk(rootXml);
+			}
+			
+			protected function trimImagesNumInput_changeHandler(event:TextOperationEvent):void
+			{
+				trimImagesNum = int(trimImagesNumInput.text);
+			}
+			
+			protected function addInputItemBtn_clickHandler(event:MouseEvent):void
+			{
+				var tempalteItemVO:TemplateItemVO = lookupTemplateItem(toBeAddItemGuidInput.text);
+				if(tempalteItemVO){
+					addResultItem(tempalteItemVO);					
+				}else{
+					Alert.show("Not Found Template Item for guid: "+toBeAddItemGuidInput.text);
+				}				
+			}
+			
+			public function removeResultItem(item:TemplateItemVO):void{
+				if(item.sheetType != TemplateItemVO.SHEET_TYPE_INNER){
+					Alert.show("这是封面模板必须全部加入精选，不可以取消");
+					return;
+				}
+				if(resultTemplateItems.source.indexOf(item)>-1){
+					resultTemplateItems.removeItemAt(resultTemplateItems.getItemIndex(item));
+					updateResultCount(item,-1);
+					if(item == spreadPageTemplate){
+						spreadPageTemplate = null;
+					}else if(item == twoPagesTemplate){
+						twoPagesTemplate = null;
+					}
+				}
+			}
+			
+			public function addResultItem(item:TemplateItemVO):void{
+				if(resultTemplateItems.source.indexOf(item)<=-1){
+					resultTemplateItems.addItem(item);
+					updateResultCount(item,1);
+				}
+			}
+			
+			/**
+			 * @param direction 1 indicate increase, -1 indicate decrease 
+			 */ 
+			public function updateResultCount(item:TemplateItemVO,direction:int):void{
+				if(item.sheetType == TemplateItemVO.SHEET_TYPE_INNER){
+					if(item.imageNum == 1){
+						countForOne += 1*direction;
+					}else if(item.imageNum == 2){
+						countForTwo += 1*direction;
+					}else if(item.imageNum == 3){
+						countForThree += 1*direction;
+					}else if(item.imageNum == 4){
+						countForFour += 1*direction;
+					}else if(item.imageNum == 5){
+						countForFive += 1*direction;
+					}
+				}else{
+					countForCover += 1*direction;
+					if(item.imageNum == 1){
+						countForCoverOne += 1*direction;
+					}else if(item.imageNum == 2){
+						countForCoverTwo += 1*direction;
+					}else if(item.imageNum == 3){
+						countForCoverThree += 1*direction;
+					}else if(item.imageNum == 4){
+						countForCoverFour += 1*direction;
+					}else if(item.imageNum == 5){
+						countForCoverFive += 1*direction;
+					}
+				}
+			}
+			
+			public function filterTemplatesByImageNum(imgNum:int):void{
+				filterImgNum = imgNum;
+				templateItems.filterFunction = filterTemplatesItemsByImgNum;
+				templateItems.refresh();
+				resultTemplateItems.filterFunction = filterTemplatesItemsByImgNum;
+				resultTemplateItems.refresh();
+			}
+			
+			public function markAsSpreadTemplate(item:TemplateItemVO):void{
+				if(item.sheetType == TemplateItemVO.SHEET_TYPE_INNER){
+					spreadPageTemplate = item;
+				}else{
+					Alert.show("这是封面模板，不可以设置");
+				}
+			}
+			
+			public function markAsTwoPageTemplate(item:TemplateItemVO):void{
+				if(item.sheetType == TemplateItemVO.SHEET_TYPE_INNER){
+					twoPagesTemplate = item;
+				}else{
+					Alert.show("这是封面模板，不可以设置");
+				}
+			}
+			
+			private function filterTemplatesItemsByImgNum(item:Object):Boolean
+			{
+				if(item == null)return false;
+				if(filterImgNum == 0)return true;
+				var itemVO:TemplateItemVO = item as TemplateItemVO;
+				if(filterImgNum == -1){
+					if(itemVO.sheetType != TemplateItemVO.SHEET_TYPE_INNER){
+						return true;
+					}else{
+						return false;
+					}
+				}else{
+					if(itemVO.sheetType == TemplateItemVO.SHEET_TYPE_INNER){
+						if(itemVO.imageNum == filterImgNum){
+							return true;
+						}else{
+							return false;
+						}
+					}else{
+						return false;
+					}
+				}
+				
+				return false;
+			}
+			
+			protected function importJXTemplatesBtn_clickHandler(event:MouseEvent):void
+			{
+				var file = new File(storageFolderBase); 
+				file.addEventListener(Event.SELECT, dirSelected); 
+				file.browseForDirectory("请选择要导入的精选集目录");
+			}
+			
+			private function dirSelected(event:Event) {
+				var file:File = event.currentTarget as File;
+				if(file.nativePath.indexOf("精选")<=-1){
+					Alert.show("所选择的目录不是精选集目录");
+					return;
+				}
+				if(file.nativePath.indexOf(currentSize)<=-1){
+					Alert.show("所选择的精选集尺寸与当前尺寸不匹配");
+					return;
+				}
+				var rootXml:XML;
+				var targetListFile = new File(file.nativePath+"/list.xml");
+				var fileStream:FileStream = new FileStream();
+				if(targetListFile.exists){
+					fileStream.open(targetListFile,FileMode.READ);
+					var listXmlString:String = fileStream.readUTFBytes(targetListFile.size);
+					fileStream.close();
+					
+					rootXml = new XML(listXmlString);					
+				}else{
+					Alert.show("没有找到精选集目录中的list.xml: "+targetListFile.url);
+					return;
+				}
+				var listXml:XML = rootXml.list[0];
+				var spreadTemplateGuid:String = listXml.@spreadTemplateGuid;
+				var twoPagesTemplateGuid:String = listXml.@halfPageSpreadTemplateGuid;
+				for each(var itemXml:XML in listXml.template){
+					var itemGuid:String = itemXml.guid;
+					var item:TemplateItemVO = lookupTemplateItem(itemGuid);
+					if(item == null)continue;
+					addResultItem(item);
+					if(spreadTemplateGuid == item.guid){
+						if(item.sheetType == TemplateItemVO.SHEET_TYPE_INNER){
+							spreadPageTemplate = item;
+						}
+					}
+					if(twoPagesTemplateGuid == item.guid){
+						if(item.sheetType == TemplateItemVO.SHEET_TYPE_INNER){
+							twoPagesTemplate = item;
+						}
+					}
+				}
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:HTTPService id="listService" resultFormat="text" result="listService_resultHandler(event)" fault="listService_faultHandler(event)"/>
+		<s:HTTPService id="downloadService" resultFormat="text" result="downloadService_resultHandler(event)" fault="downloadService_faultHandler(event)"/>
+		<s:ArrayCollection id="products">
+		</s:ArrayCollection>
+	</fx:Declarations>
+	<s:VGroup width="100%" height="100%" gap="20">
+		<s:HGroup width="100%">
+			<s:VGroup>
+				<s:HGroup>
+					<s:ComboBox id="productComboBox" dataProvider="{products}" labelField="name" prompt="Select Product" 
+								change="productComboBox_changeHandler(event)" selectedIndex="0"/>
+					<s:TextInput id="sizeInput" prompt="input size id" text="" width="100" change="sizeInput_changeHandler(event)"/>
+					<s:TextInput id="trimImagesNumInput" text="{trimImagesNum}" editable="false" prompt="input image num" change="trimImagesNumInput_changeHandler(event)"/>
+					<s:TextArea id="listURLTextArea" height="25" width="780" editable="true"
+								text="http://test.artisanstate.com/template/global/list?webClientId=1&amp;productType=2&amp;designSize=8X10&amp;autoRandomNum=27&amp;imageNum=0"/>
+				</s:HGroup>	
+				<s:HGroup>
+					<s:Button id="generateBtn" label="加载服务器端模板列表数据" fontSize="15" fontFamily="微软雅黑" color="green" fontWeight="bold"
+							  click="generateBtn_clickHandler('server')"/>
+					<s:Button id="generateBtn2" label="加载本地已缓存模板列表数据" fontSize="15" click="generateBtn_clickHandler('local')"/>
+					<s:Button id="downloadBtn" label="下载模板数据（缩略图和xml）" fontSize="15" fontFamily="微软雅黑" color="green" fontWeight="bold"
+							  click="downloadBtn_clickHandler(event)"/>
+					<s:Button id="downloadSelectedItemBtn" label="重新下载选中的单个模板数据（缩略图和xml）" 
+							  click="downloadSelectedItemBtn_clickHandler(event)"/>
+					<s:HGroup >
+						<s:Label text="手动输入模板GUID加入精选："/>
+						<s:TextInput id="toBeAddItemGuidInput" prompt="input template guid" width="300"/>
+						<s:Button id="addInputItemBtn" label="加入精选" fontSize="15" fontFamily="微软雅黑" color="green"
+								  click="addInputItemBtn_clickHandler(event)"/>
+					</s:HGroup>
+				</s:HGroup>
+			</s:VGroup>
+		</s:HGroup>
+		
+		<s:HGroup width="100%" height="100%" gap="10">
+			<s:VGroup width="60%" height="100%" >
+				<s:HGroup width="100%" horizontalAlign="center">
+					<s:Label text="【所有模板】" fontSize="15" fontFamily="微软雅黑" color="green" fontWeight="bold"/>
+					<s:Label text="模板数量:{templateItems.length}" fontWeight="bold"/>
+					<s:Label text="按照片数量筛选模板" fontSize="12" fontFamily="微软雅黑" color="green" fontWeight="bold"/>
+					<s:Button label="All" width="45" click="filterTemplatesByImageNum(0)"/>
+					<s:Button label="Cover" width="60" click="filterTemplatesByImageNum(-1)"/>
+					<s:Button label="1" width="45" click="filterTemplatesByImageNum(1)"/>
+					<s:Button label="2" width="45" click="filterTemplatesByImageNum(2)"/>
+					<s:Button label="3" width="45" click="filterTemplatesByImageNum(3)"/>
+					<s:Button label="4" width="45" click="filterTemplatesByImageNum(4)"/>
+					<s:Button label="5" width="45" click="filterTemplatesByImageNum(5)"/>
+				</s:HGroup>
+				<s:DataGrid id="dg" dataProvider="{templateItems}" width="720" height="100%" doubleClickEnabled="true">
+					<s:columns>
+						<s:ArrayCollection>
+							<s:GridColumn headerText="Guid" dataField="guid" width="280"/>
+							<s:GridColumn headerText="xml" dataField="xmlStatusLabel" width="90"/>
+							<s:GridColumn headerText="thumbnail" dataField="thumbnailStatusLabel" width="90"/>
+							<s:GridColumn headerText="preview" dataField="thumbnailFileFullPath" width="120" 
+										  itemRenderer="com.joe.tool.generateTemplatesPackage.TemplatePreviewItemRenderer"/>
+							<s:GridColumn headerText="操作" dataField="guid">
+								<s:itemRenderer>
+									<fx:Component>
+										<s:GridItemRenderer>
+											<fx:Script>
+												<![CDATA[
+													import mx.core.IDataRenderer;
+													protected function button1_clickHandler(event:MouseEvent):void
+													{
+														outerDocument.addResultItem(IDataRenderer(this).data as TemplateItemVO);											
+													}
+												]]>
+											</fx:Script>
+											
+											<s:Button label="加入精选" color="green" click="button1_clickHandler(event)"/>
+										</s:GridItemRenderer>
+									</fx:Component>
+								</s:itemRenderer>
+							</s:GridColumn>
+						</s:ArrayCollection>
+					</s:columns>
+				</s:DataGrid>
+			</s:VGroup>
+			
+			<s:VGroup width="100%" height="100%">
+				<s:HGroup width="100%" verticalAlign="middle">
+					<s:VGroup width="100%">
+						<s:Group width="100%">
+							<s:Label text="【精选模板】" fontSize="15" fontFamily="微软雅黑" color="green" fontWeight="bold" horizontalCenter="0"/>
+						</s:Group>
+						<s:HGroup gap="5">
+							<s:VGroup>
+								<s:Label fontSize="12" color="green" text="【内页】 一张：{countForOne} ,二张：{countForTwo} ,三张：{countForThree} ,四张：{countForFour} ,五张：{countForFive}"/>
+								<s:Label fontSize="12" color="green" text="【封面】 一张：{countForCoverOne} ,二张：{countForCoverTwo} ,三张：{countForCoverThree} ,四张：{countForCoverFour} ,五张：{countForCoverFive}"/>
+							</s:VGroup>
+							<s:Label text="跨页平铺:"/>
+							<s:Image width="100" height="50"
+									 scaleMode="letterbox" source="{spreadPageTemplate.thumbnailFileFullPath}"/>	
+							<s:Label text="双页平铺:"/>
+							<s:Image width="100" height="50"
+									 scaleMode="letterbox" source="{twoPagesTemplate.thumbnailFileFullPath}"/>
+						</s:HGroup>	
+					</s:VGroup>
+					<s:Button id="importJXTemplatesBtn" label="导入精选" right="20" height="50"
+							  fontWeight="bold" fontSize="16" fontFamily="微软雅黑" color="green"
+							  click="importJXTemplatesBtn_clickHandler(event)"/>
+					<s:Button id="trimImagesAndOutputFinalListXmlBtn" label="打包输出" right="20" height="50"
+							  fontWeight="bold" fontSize="16" fontFamily="微软雅黑" color="green"
+						  click="trimAndOutputFinalListXmlBtn_clickHandler(event)"/>
+					
+				</s:HGroup>
+				<s:DataGrid id="dgResult" dataProvider="{resultTemplateItems}" width="100%" height="100%" doubleClickEnabled="true">
+					<s:columns>
+						<s:ArrayCollection>
+							<s:GridColumn headerText="Guid" dataField="guid" width="250"/>
+							<s:GridColumn headerText="操作" dataField="guid">
+								<s:itemRenderer>
+									<fx:Component>
+										<s:GridItemRenderer>
+											<fx:Script>
+												<![CDATA[
+													import mx.core.IDataRenderer;
+													protected function button1_clickHandler(event:MouseEvent):void
+													{
+														outerDocument.removeResultItem(IDataRenderer(this).data as TemplateItemVO);											
+													}
+													
+													protected function button2_clickHandler(event:MouseEvent):void
+													{
+														outerDocument.markAsSpreadTemplate(IDataRenderer(this).data as TemplateItemVO);
+													}
+													
+													protected function button3_clickHandler(event:MouseEvent):void
+													{
+														outerDocument.markAsTwoPageTemplate(IDataRenderer(this).data as TemplateItemVO);	
+													}													
+												]]>
+											</fx:Script>
+											<s:HGroup>
+												<s:Button label="取消精选" fontSize="12" click="button1_clickHandler(event)"/>	
+												<s:Button label="标记跨页平铺" fontSize="12" click="button2_clickHandler(event)"/>
+												<s:Button label="标记双页平铺" fontSize="12" click="button3_clickHandler(event)"/>	
+											</s:HGroup>
+										</s:GridItemRenderer>
+									</fx:Component>
+								</s:itemRenderer>
+							</s:GridColumn>
+							<s:GridColumn headerText="preview" dataField="thumbnailFileFullPath" width="120" 
+										  itemRenderer="com.joe.tool.generateTemplatesPackage.TemplatePreviewItemRenderer"/>
+						</s:ArrayCollection>
+					</s:columns>
+				</s:DataGrid>
+			</s:VGroup>
+		</s:HGroup>
+		
+	</s:VGroup>
+</s:Group>

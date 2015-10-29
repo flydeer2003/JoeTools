@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Created by luQF on 2015/9/24.
+-->
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" left="10" right="10" top="10" bottom="10">
+  <fx:Script><![CDATA[
+    import com.yinquduo.common.core.utils.StringUtil;
+
+    import mx.collections.ArrayCollection;
+    import mx.controls.Alert;
+    import mx.rpc.events.FaultEvent;
+    import mx.rpc.events.ResultEvent;
+
+    [Bindable]
+    public var projects:ArrayCollection = new ArrayCollection();
+    var downloadProjects:ArrayCollection = new ArrayCollection();
+    var failedProjects:ArrayCollection = new ArrayCollection();
+    public var currentDownloadProject:Project;
+    public var baseFolderPath:String = "D:/JoeTool/fixWrongProjectXml/data/";
+    public var dateTimeString:String;
+
+    public function startBtnClickHandler(event:Event):void{
+        dateTimeString = new Date().toTimeString();
+        var projectIdsString:String = StringUtil.safeTrim(projectIdsTextArea.text);
+        var projectIds = projectIdsString.split(",");
+        for each(var idItem:String in projectIds){
+          projects.addItem(new Project(idItem));
+        }
+      downloadProjects.addAll(projects);
+      startNextDownload();
+    }
+
+    public function continueBtnClickHandler(event:Event):void{
+        for each(var item:Project in projects){
+          if(item.status == 3){
+            downloadProjects.addItemAt(item,0);
+          }
+        }
+      startNextDownload();
+    }
+
+    var exportSourefile:File = new File(baseFolderPath);
+    public function exportBtnClickHandler(event:Event):void{
+      exportSourefile.addEventListener(Event.SELECT,fileSelectedHandler);
+      exportSourefile.browseForDirectory("选择包含已修复Project Xml的文件夹");
+    }
+
+    private function fileSelectedHandler(evt:Event):void{
+      exportSourefile.removeEventListener(Event.SELECT,fileSelectedHandler);
+      var guids:String = "";
+      var guidCount:int = 0;
+      for each(var itemFile:File in exportSourefile.getDirectoryListing()){
+        if(itemFile.extension == "xml"){
+          guids = guids+itemFile.name+",";
+          guidCount ++;
+        }
+      }
+      guids = guids.replace(/.xml/g,"");
+      var guidFile:File = new File(exportSourefile.nativePath+"/guids-count-"+guidCount+".txt");
+      saveStringToDisk(guids,guidFile);
+      exportSourefile.openWithDefaultApplication();
+    }
+
+    protected function downloadService_resultHandler(event:ResultEvent):void {
+      var projectXml:XML = event.result as XML;
+      currentDownloadProject.origXml = projectXml;
+      saveOrigXmlToDisk(currentDownloadProject.origXml);
+      currentDownloadProject.status = 2;
+      var fixed:Boolean = currentDownloadProject.checkAndFix();
+      if(fixed){//需要修复且修复完成
+        saveFixedXmlToDisk(currentDownloadProject.fixedXml);
+        currentDownloadProject.status = 4;
+      }else{//数据正确，不需要修复的
+        currentDownloadProject.status = 5;
+      }
+      removeCurrentFromDownloadProjects();
+      startNextDownload();
+    }
+
+    private function saveStringToDisk(string:String,file:File):void{
+      if(!file.parent.exists){
+        file.parent.createDirectory();
+      }
+      var fs:FileStream = new FileStream();
+      fs.open(file,FileMode.WRITE);
+      fs.writeUTFBytes(string);
+      fs.close();
+    }
+
+    private function saveOrigXmlToDisk(projectXml:XML):void{
+      var projectXmlFile:File = new File(baseFolderPath+"orig/"+currentDownloadProject.guid+".xml");
+      saveStringToDisk(projectXml.toXMLString(),projectXmlFile);
+    }
+
+    private function saveFixedXmlToDisk(projectXml:XML):void{
+      var projectXmlFile:File = new File(baseFolderPath+"fixed/"+currentDownloadProject.guid+".xml");
+      saveStringToDisk(projectXml.toXMLString(),projectXmlFile);
+    }
+
+    public function removeCurrentFromDownloadProjects(){
+      downloadProjects.removeItemAt(downloadProjects.getItemIndex(currentDownloadProject));
+      currentDownloadProject = null;
+    }
+
+    private function startNextDownload():void
+    {
+      //已经有项目在下载，则返回
+      if(currentDownloadProject && currentDownloadProject.status == 1){
+        return;
+      }
+      //否则取新项目下载
+      if(downloadProjects.length>0){
+        var item:Project = downloadProjects.getItemAt(0) as Project;
+        var projectGUID:String = item.guid;
+        var url:String = "http://upload.artisanstate.com"+"/upload/Preview/GetPhotobookXmlByProjectId?projectId="+projectGUID+"&webClientId=1&isParentBook=false&designUid=&designRequestFlg=";
+        downloadService.url = url;
+        currentDownloadProject = item;
+        currentDownloadProject.status = 1;
+        downloadService.send();
+      }
+    }
+
+    protected function downloadService_faultHandler(event:FaultEvent):void
+    {
+      Alert.show(event.toString(),"Load Error");
+      currentDownloadProject.status = 3;
+      removeCurrentFromDownloadProjects();
+      startNextDownload();
+    }
+    ]]></fx:Script>
+
+  <fx:Declarations>
+    <s:HTTPService id="downloadService" resultFormat="e4x" result="downloadService_resultHandler(event)" fault="downloadService_faultHandler(event)"/>
+  </fx:Declarations>
+
+  <s:VGroup width="100%" height="100%">
+    <!--input-->
+    <s:VGroup width="100%" height="100">
+      <s:TextArea id="projectIdsTextArea" width="100%" height="100%"/>
+      <s:HGroup>
+      <s:Button id="startButton" label="Start" click="startBtnClickHandler(event)"/>
+      <s:Button id="continueButton" label="Continue" click="continueBtnClickHandler(event)"/>
+        <s:Button id="exportFixedGuidButton" label="Export Fixed Guids" click="exportBtnClickHandler(event)"/>
+      </s:HGroup>
+    </s:VGroup>
+
+    <!--output-->
+    <s:DataGrid width="100%" height="100%" dataProvider="{projects}">
+      <s:columns>
+        <s:ArrayCollection>
+          <s:GridColumn headerText="Project Id" dataField="guid"/>
+          <s:GridColumn headerText="product参数" dataField="product"/>
+          <s:GridColumn headerText="cover" dataField="cover"/>
+          <s:GridColumn headerText="size" dataField="size"/>
+          <s:GridColumn headerText="client" dataField="client"/>
+          <s:GridColumn headerText="原始 P 数" dataField="innerSpreadsOrigCount"/>
+          <s:GridColumn headerText="结算收取的加页数" dataField="origPageAmount"/>
+          <s:GridColumn headerText="实缺 P 数" dataField="spreadsMissedCount"/>
+          <s:GridColumn headerText="处理状态" dataField="statusLabel"/>
+        </s:ArrayCollection>
+      </s:columns>
+    </s:DataGrid>
+  </s:VGroup>
+</s:Group>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                       xmlns:s="library://ns.adobe.com/flex/spark"
+                       xmlns:mx="library://ns.adobe.com/flex/mx"
+                       xmlns:escape="com.joe.tool.escape.*" xmlns:xml1="com.joe.tool.xml.*" xmlns:base64="com.joe.tool.base64.*"
+                       xmlns:download="com.joe.tool.download.*" xmlns:fixmissedimage="com.joe.tool.fixmissedimage.*"
+                       xmlns:generateTemplatesPackage="com.joe.tool.generateTemplatesPackage.*"
+                       xmlns:fixWrongProjectXml="com.joe.tool.FixWrongProjectXml.*">
+    <fx:Declarations>
+        <!-- 将非可视元素（例如服务、值对象）放在此处 -->
+    </fx:Declarations>
+    <fx:Declarations>
+        <!-- 将非可视元素（例如服务、值对象）放在此处 -->
+    </fx:Declarations>
+    <mx:ApplicationControlBar id="ctrlBar">
+        <s:ButtonBar dataProvider="{vs}"/>
+    </mx:ApplicationControlBar>
+
+    <mx:ViewStack id="vs" left="0" right="0" top="{ctrlBar.height+10}" bottom="0">
+        <s:NavigatorContent label="url encode" width="100%" height="100%">
+            <escape:UrlEncodeTool/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="xml namespace" width="100%" height="100%">
+            <xml1:XmlNameSpaceTool/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="project xml translator" width="100%" height="100%">
+            <xml1:ProjectXmlTranslator/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="base 64" width="100%" height="100%">
+            <base64:Base64Tool/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="download" width="100%" height="100%">
+            <download:DownloadTool/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="Fix Missed Image" width="100%" height="100%">
+            <fixmissedimage:FixMissedImageTool/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="Package Templates" width="100%" height="100%">
+            <generateTemplatesPackage:GenerateTemplatesPackageTool/>
+        </s:NavigatorContent>
+        <s:NavigatorContent label="Fix Wrong Project Xml" width="100%" height="100%">
+            <fixWrongProjectXml:FixWrongProjectXmlTool/>
+        </s:NavigatorContent>
+    </mx:ViewStack>
+</s:WindowedApplication>

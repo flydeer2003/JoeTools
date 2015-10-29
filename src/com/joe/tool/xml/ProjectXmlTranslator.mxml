@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" left="10" right="10" bottom="10" top="10">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			protected function chooseDirBtn_clickHandler(event:MouseEvent):void
+			{
+				var dir:File = new File();
+				dir.addEventListener(Event.SELECT,onSelect);
+				dir.browseForDirectory("请选择包含需要转换的project xml所在目录");
+			}
+			
+			protected function onSelect(event:Event):void
+			{
+				sourceDir = (event.target) as File;
+				outputDir = sourceDir.resolvePath("output");
+				outputDir.createDirectory();
+				
+				clean();
+				
+				for each (var file:File in sourceDir.getDirectoryListing()){
+					if(file.isDirectory == false){
+						transItems.addItem(new TransItem(file,outputDir.resolvePath(file.name)));
+					}
+				}
+			}
+			
+			[Bindable]
+			private var sourceDir:File;
+			
+			private var outputDir:File;
+			
+			[Bindable]
+			private var transItems:ArrayCollection = new ArrayCollection();
+			
+			private function clean():void{
+				transItems.removeAll();
+				for each(var file:File in outputDir.getDirectoryListing()){
+					file.deleteFile();
+				}
+			}
+			
+			protected function startBtn_clickHandler(event:MouseEvent):void
+			{
+				for each(var item:TransItem in transItems){
+					item.translate();
+				}
+			}
+			
+			protected function openBtn_clickHandler(event:MouseEvent):void
+			{
+				outputDir.openWithDefaultApplication();
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:VGroup width="100%" height="100%">
+		<s:HGroup width="100%">
+			<s:Label text="source directoy:"/>
+			<s:TextInput text="{sourceDir.nativePath}" editable="false" width="100%"/>
+			<s:Button id="chooseDirBtn" click="chooseDirBtn_clickHandler(event)" label="choose dir"/>
+		</s:HGroup>
+		
+		<s:VGroup width="100%" height="100%">
+			<s:Group width="100%">
+				<s:HGroup right="10">
+					<s:Button id="startBtn" label="start translating" click="startBtn_clickHandler(event)"/>
+					<s:Button id="openBtn" label="open output folder" click="openBtn_clickHandler(event)"/>					
+				</s:HGroup>
+			</s:Group>
+			
+			<s:DataGrid width="100%" height="100%" dataProvider="{transItems}">
+				<s:columns>
+					<s:ArrayCollection>
+						<s:GridColumn headerText="project xml" dataField="projectXmlFileName"/>
+						<s:GridColumn headerText="result xml" dataField="resultXmlFileName"/>
+						<s:GridColumn headerText="operations"/>	
+					</s:ArrayCollection>
+				</s:columns>
+			</s:DataGrid>
+		</s:VGroup>
+	</s:VGroup>
+</s:Group>

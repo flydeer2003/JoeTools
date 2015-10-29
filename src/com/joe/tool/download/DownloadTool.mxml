@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="100%" height="100%">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			
+			private var folderPath:String = "D:/JoeTool/downloads/";
+			
+			protected function downloadBtn_clickHandler(event:MouseEvent):void
+			{
+				var req:URLRequest = new URLRequest(urlInput.text);
+				/*var urlLoader:URLLoader = new URLLoader(req);
+				urlLoader.dataFormat = URLLoaderDataFormat.BINARY;
+				urlLoader.addEventListener(Event.COMPLETE,loadCompleteHnadler);
+				urlLoader.addEventListener(IOErrorEvent.IO_ERROR,loadErrorHandler);
+				urlLoader.load(); */
+				var fr:FileReference = new FileReference();
+				fr.download(req);
+			}
+			
+			protected function openFolderBtn_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+			protected function loadCompleteHnadler(event:Event):void
+			{
+				var loader:URLLoader = event.currentTarget as URLLoader;
+				
+			}
+			
+			protected function loadErrorHandler(event:IOErrorEvent):void
+			{
+				Alert.show(event+"");				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:VGroup horizontalCenter="0" verticalCenter="0">
+		<s:FormItem label="url">
+			<s:TextArea id="urlInput" width="400" height="300">
+				
+			</s:TextArea>	
+		</s:FormItem>
+		<s:HGroup gap="30">
+			<s:Button id="downloadBtn" label="download" click="downloadBtn_clickHandler(event)"/>
+		</s:HGroup>
+	</s:VGroup>
+</s:Group>

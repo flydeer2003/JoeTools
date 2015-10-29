@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" left="10" right="10" top="10" bottom="10">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.yinquduo.common.core.utils.CleanupUtil;
+			
+			import mx.collections.ArrayCollection;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			protected function getBtn_clickHandler(event:MouseEvent):void
+			{
+				httpServ.url = xmlLocation.text;
+				httpServ.send();				
+			}
+			
+			protected function changeNSBtn_clickHandler(event:MouseEvent):void
+			{
+				for each(var nsw:NameSpaceWrapper in namespaceWrappers){
+					var ns:Namespace = new Namespace(nsw.prefix,nsw.uri);
+					CleanupUtil.replaceNS(inputXml,nsw.ns,ns);
+					nsw.ns = ns;
+				}
+				output.text = inputXml.toXMLString();
+			}
+			
+			[Bindable]
+			private var namespaceWrappers:ArrayCollection = new ArrayCollection();
+			
+			private var inputXml:XML;
+			protected function httpServ_resultHandler(event:ResultEvent):void
+			{
+				inputXml = event.result as XML;
+				namespaceWrappers.removeAll();
+				for each(var ns:Namespace in inputXml.namespaceDeclarations()){
+					namespaceWrappers.addItem(new NameSpaceWrapper(ns));
+				}
+				input.text = inputXml.toXMLString();				
+			}
+			
+			protected function httpServ_faultHandler(event:FaultEvent):void
+			{
+				input.text = event.fault+"";
+			}
+			
+			protected function cleanupBtn_clickHandler(event:MouseEvent):void
+			{
+				CleanupUtil.cleanup(inputXml);
+				output.text = inputXml.toXMLString();
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:HTTPService id="httpServ" resultFormat="e4x" result="httpServ_resultHandler(event)" fault="httpServ_faultHandler(event)"/>
+	</fx:Declarations>
+	
+	<s:VGroup width="100%" height="100%">
+		<s:HGroup width="100%">
+			<s:TextInput id="xmlLocation" width="100%"/>
+			<s:Button id="getBtn" label="Get" click="getBtn_clickHandler(event)"/>
+		</s:HGroup>
+		
+		<s:Line left="10" right="10">
+			<s:stroke>
+				<s:SolidColorStroke color="0x999999" weight="1"/>
+			</s:stroke>
+		</s:Line>
+		
+		<s:Group width="100%">
+			<s:HGroup right="10">
+				<s:Button label="change namespace" id="changeNSBtn" click="changeNSBtn_clickHandler(event)"/>
+				<s:Button label="cleanup" id="cleanupBtn" click="cleanupBtn_clickHandler(event)"/>
+			</s:HGroup>
+		</s:Group>
+		
+		<s:DataGrid width="100%" dataProvider="{namespaceWrappers}" editable="true">
+			<s:columns>
+				<s:ArrayList>
+					<s:GridColumn editable="true" headerText="prefix" dataField="prefix" width="100"/>
+					<s:GridColumn editable="true" headerText="uri" dataField="uri"/>
+				</s:ArrayList>
+			</s:columns>
+		</s:DataGrid>
+		
+		<mx:HDividedBox width="100%" height="100%" borderColor="0x999999" borderVisible="true">
+			<s:TextArea id="input" editable="false" height="100%" width="50%">
+				
+			</s:TextArea>
+			<s:TextArea id="output" editable="false" height="100%" width="50%">
+				
+			</s:TextArea>
+		</mx:HDividedBox>
+	</s:VGroup>
+</s:Group>

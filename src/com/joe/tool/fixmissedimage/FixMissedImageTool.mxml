@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" left="10" right="10" top="10" bottom="10">
+	<fx:Script>
+		<![CDATA[
+		import com.joe.tool.common.FileUtil;
+		import com.yinquduo.common.core.utils.StringUtil;
+
+		import mx.collections.ArrayCollection;
+		import mx.controls.Alert;
+		import mx.rpc.events.FaultEvent;
+		import mx.rpc.events.ResultEvent;
+
+		var projectXml:XML;
+		var imgIds:ArrayCollection = new ArrayCollection();
+		var imgIdsInUsed:ArrayCollection = new ArrayCollection();
+		var imgIdsMissed:ArrayCollection = new ArrayCollection();
+
+		protected function httpServ_resultHandler(event:ResultEvent):void {
+			projectXml = event.result as XML;
+			if (projectXml == null) {
+				Alert.show("没有下载到project xml，请将url复制到浏览器窗口打开查看。");
+				return;
+			}
+			var photoElementsXmlList:XMLList = projectXml.book.spreads.spread.elements.element.(@type = "PhotoElement");
+			var imgIdInUsed:String;
+			for each(var photoElementXml:XML in photoElementsXmlList) {
+				imgIdInUsed = photoElementXml.@imageid + "";
+				if (!StringUtil.isEmpty(imgIdInUsed)) {
+					imgIdsInUsed.addItem(imgIdInUsed);
+				}
+			}
+
+			var imagesXmlList:XMLList = projectXml.images.image;
+			var imgId:String;
+			for each(var imageXml:XML in imagesXmlList) {
+				imgId = imageXml.@id + "";
+				if (!StringUtil.isEmpty(imgId)) {
+					imgIds.addItem(imgId);
+				}
+			}
+
+			for each(var itemInUsed:String in imgIdsInUsed) {
+				if (!imgIds.contains(itemInUsed)) {
+					imgIdsMissed.addItem(itemInUsed);
+				}
+			}
+
+			var sqlText:String = "select UIDPK,GUID,IMAGE_NAME,PIXEL_WIDTH,PIXEL_HEIGHT from yimage where UIDPK in (" + imgIdsMissed.source.join() + ");"
+
+			sqlTextArea.text = sqlText;
+		}
+
+		protected function httpServ_faultHandler(event:FaultEvent):void {
+			Alert.show(event.toString(), "Load Error");
+		}
+
+		protected function parseBtn_clickHandler(event:MouseEvent):void {
+			var projectGUID:String = projectGUIDInput.text;
+			var postfix:String = envList.selectedItem.postfix;
+			var url:String = "http://upload.artisanstate.com" + postfix + "/upload/Preview/GetPhotobookXmlByProjectId?projectId=" + projectGUID + "&webClientId=1&isParentBook=false&designUid=&designRequestFlg=";
+			urlInput.text = url;
+		}
+
+		protected function loadBtn_clickHandler(event:MouseEvent):void {
+			cleanup();
+			httpServ.url = urlInput.text;
+			httpServ.send();
+		}
+
+		public var baseFolderPath:String = "D:/JoeTool/fixMissedImageProjectXml/data/";
+
+		protected function fixBtn_clickHandler(event:MouseEvent):void {
+			var projectGUID:String = projectGUIDInput.text;
+			var origProjectXmlFile:File = new File(baseFolderPath + "orig/" + projectGUID + ".xml");
+			FileUtil.saveStringToDisk(projectXml.toXMLString(), origProjectXmlFile);
+
+			if (!StringUtil.isEmpty(imagesXmlArea.text)) {
+				var restoredImagesXml:XMLList = new XMLList(imagesXmlArea.text);
+				projectXml.images[0].appendChild(restoredImagesXml);
+			} else {
+				for each(var missedImgId:String in imgIdsMissed) {
+					var imageMissedPhotoElementsXmlList:XMLList = projectXml.book.spreads.spread.elements.element.(@type == "PhotoElement");
+					for each(var photoElementXml:XML in imageMissedPhotoElementsXmlList) {
+						if ( photoElementXml.@imageid+"" == missedImgId) {
+							photoElementXml.@imageid = "";
+						}
+					}
+				}
+			}
+			fixedXmlTextArea.text = projectXml.toXMLString();
+			var fixedProjectXmlFile:File = new File(baseFolderPath + "fixed-missImage/" + projectGUID + ".xml");
+			FileUtil.saveStringToDisk(fixedXmlTextArea.text, fixedProjectXmlFile);
+		}
+
+		private function cleanup():void {
+			projectXml = null;
+			imgIds.removeAll();
+			imgIdsInUsed.removeAll();
+			imgIdsMissed.removeAll();
+			sqlTextArea.text = "";
+			imagesXmlArea.text = "";
+			fixedXmlTextArea.text = "";
+		}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		<s:HTTPService id="httpServ" resultFormat="e4x" result="httpServ_resultHandler(event)" fault="httpServ_faultHandler(event)"/>
+		<s:ArrayCollection id="envDataProvider">
+			<fx:Object id="prod" label="product" postfix=""/>
+			<fx:Object id="test" label="test" postfix=".t"/>
+			<fx:Object id="dev" label="dev" postfix=".d"/>
+		</s:ArrayCollection>
+	</fx:Declarations>
+	<s:VGroup width="100%" height="100%">
+		<s:HGroup>
+			<s:DropDownList id="envList" dataProvider="{envDataProvider}" selectedIndex="0"/>
+			<s:TextInput id="projectGUIDInput" prompt="input project guid"/>
+		</s:HGroup>
+		<s:Button id="parseBtn" label="Parse" click="parseBtn_clickHandler(event)"/>
+		<s:TextInput id="urlInput" prompt="input project url" width="100%"/>
+		<s:Button id="loadBtn" label="Load" click="loadBtn_clickHandler(event)"/>
+
+		<s:TextArea id="sqlTextArea" width="100%" height="120" prompt="sqlTextArea">
+		</s:TextArea>
+		<s:TextArea id="imagesXmlArea" width="100%" height="300" prompt="imagesXmlArea">
+		</s:TextArea>
+		<s:Button id="fixBtn" label="Fix" click="fixBtn_clickHandler(event)"/>
+		<s:TextArea id="fixedXmlTextArea" prompt="fixed project xml" width="100%" height="300">
+			
+		</s:TextArea>
+	</s:VGroup>
+</s:Group>

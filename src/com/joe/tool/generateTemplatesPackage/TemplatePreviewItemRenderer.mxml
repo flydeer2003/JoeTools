@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx" clipAndEnableScrolling="true">
+	
+	<fx:Script>
+		<![CDATA[
+			override public function prepare(hasBeenRecycled:Boolean):void {
+				if(data){
+					var imgFileFullPath:String = data[column.dataField];
+					var imgFile:File = new File(imgFileFullPath);
+					templatePreviewImage.source = imgFile.nativePath;
+				}
+			}
+		]]>
+	</fx:Script>
+	<s:Rect left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:SolidColor color="black"/>
+		</s:fill>
+	</s:Rect>
+	<s:Image id="templatePreviewImage" left="10" right="10" top="5" bottom="5" width="100" height="50"
+			 scaleMode="letterbox"/>	
+			
+</s:GridItemRenderer>
