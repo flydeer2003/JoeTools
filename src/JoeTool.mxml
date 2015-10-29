@@ -14,6 +14,7 @@
     </fx:Declarations>
     <mx:ApplicationControlBar id="ctrlBar">
         <s:ButtonBar dataProvider="{vs}"/>
+        <s:Button id="openDataFolderButton" label="Open Data Folder" click="openDataFolderButton_clickHandler(event)"/>
     </mx:ApplicationControlBar>
 
     <mx:ViewStack id="vs" left="0" right="0" top="{ctrlBar.height+10}" bottom="0">
@@ -42,4 +43,13 @@
             <fixWrongProjectXml:FixWrongProjectXmlTool/>
         </s:NavigatorContent>
     </mx:ViewStack>
+    <fx:Script><![CDATA[
+        private function openDataFolderButton_clickHandler(event:MouseEvent):void {
+            openDataFolder();
+        }
+
+        private function openDataFolder():void {
+
+        }
+        ]]></fx:Script>
 </s:WindowedApplication>
