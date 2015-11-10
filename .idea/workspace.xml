@@ -34,6 +34,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="as_main@54.183.8.147[生产环境只读从库]" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="as_main" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="hideWarnings" value="true" />
@@ -48,7 +62,7 @@
       <file leaf-file-name="FixMissedImageTool.mxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.827586">
+            <state vertical-scroll-proportion="0.0">
               <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
               <folding>
                 <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
@@ -76,11 +90,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flexCompiler.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="flexCompiler.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/flexCompiler.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13422818">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -89,8 +113,18 @@
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6819127-a374-4bb9-bdb5-8cd698867851/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.666667">
-              <caret line="85" column="14" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3628602">
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -99,12 +133,32 @@
       <file leaf-file-name="JoeTool.mxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.413794">
+            <state vertical-scroll-proportion="0.0">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <marker date="1446098194099" expanded="true" signature="2511:2552" placeholder="{...}" />
                 <marker date="1446098194099" expanded="true" signature="2601:2712" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoeTool.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JoeTool.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataSources.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,9 +194,10 @@
         <option value="$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml" />
         <option value="$PROJECT_DIR$/src/JoeTool.mxml" />
         <option value="$PROJECT_DIR$/JoeTool.iml" />
+        <option value="$PROJECT_DIR$/.idea/flexCompiler.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f6819127-a374-4bb9-bdb5-8cd698867851/console.sql" />
-        <option value="$PROJECT_DIR$/.idea/flexCompiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -167,7 +222,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1874" />
-    <option name="height" value="1092" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -192,13 +247,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Production">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JoeTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -237,16 +295,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Production">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JoeTool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JoeTool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -512,9 +567,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Unknown" factoryName="Unknown">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -589,7 +641,8 @@
       <workItem from="1445587882638" duration="10960000" />
       <workItem from="1446089662220" duration="8409000" />
       <workItem from="1446109405507" duration="6167000" />
-      <workItem from="1446116413348" duration="8223000" />
+      <workItem from="1446116413348" duration="12426000" />
+      <workItem from="1447148099775" duration="162000" />
     </task>
     <task id="LOCAL-00001" summary="init gitignore">
       <created>1446094156575</created>
@@ -643,37 +696,37 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86100000" />
+    <option name="totallyTimeSpent" value="90465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1092" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33090532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1748179" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298647" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16097023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16097023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17309813" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3257024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19458897" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21956296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33090532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27564767" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -715,70 +768,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-          <folding>
-            <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
-            <marker date="1445603460900" expanded="false" signature="299:482" placeholder="..." />
-            <marker date="1445603460900" expanded="true" signature="749:1795" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="815:888" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1089:1234" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1182:1229" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1360:1469" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1429:1464" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1522:1613" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1562:1608" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1863:1915" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="1983:2320" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="2387:2459" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="2608:3630" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="2878:3010" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="3016:3395" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="3071:3390" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="3273:3384" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="3330:3377" placeholder="{...}" />
-            <marker date="1445603460900" expanded="true" signature="3666:3859" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/joe/tool/xml/ProjectXmlTranslator.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/joe/tool/FixWrongProjectXml/FixWrongProjectXmlTool.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="99" column="56" selection-start-line="99" selection-start-column="56" selection-end-line="99" selection-end-column="56" />
-          <folding>
-            <marker date="1443089843129" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,37 +1269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <marker date="1437360185876" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1437360185876" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1437360185876" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1437360185876" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1437360185876" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JoeTool.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="155" selection-start-line="4" selection-start-column="155" selection-end-line="4" selection-end-column="155" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27292818">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,36 +1284,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="77" />
-          <folding>
-            <marker date="1443089843129" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1443089843129" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JoeTool.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.413794">
+        <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <marker date="1446098194099" expanded="true" signature="2511:2552" placeholder="{...}" />
@@ -1364,21 +1302,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6819127-a374-4bb9-bdb5-8cd698867851/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.666667">
-          <caret line="85" column="14" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/joe/tool/fixmissedimage/FixMissedImageTool.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.827586">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
           <folding>
             <marker date="1445603460900" expanded="true" signature="260:482" placeholder="..." />
@@ -1407,8 +1336,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/flexCompiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13422818">
+        <state vertical-scroll-proportion="0.0">
           <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JoeTool.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f6819127-a374-4bb9-bdb5-8cd698867851/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/temp/JoeTool/JoeTool.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7807808">
+          <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3628602">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
           <folding />
         </state>
       </provider>
